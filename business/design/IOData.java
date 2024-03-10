@@ -1,6 +1,8 @@
 package ra.business.design;
 
-public interface IOData {
+import java.io.Serializable;
+
+public interface IOData extends Serializable {
     void inputData();
     void displayData();
 }

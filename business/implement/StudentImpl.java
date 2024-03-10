@@ -78,20 +78,20 @@ public class StudentImpl extends Student implements IOData {
         }while (true);
     }
 
-    public static String inputPhoneNumber(Scanner scanner){
+    public static String inputPhoneNumber(Scanner scanner) {
         System.out.println("Hãy nhâp số điện thoại của sinh viên:");
         do {
             String phoneInput = scanner.nextLine();
-            if(listStudents.stream().anyMatch(student -> student.getPhone().equals(phoneInput))){
-                System.err.println("Số điện thoại bị trùng, vui lòng nhập lại!");
-            } else {
-            if(Pattern.matches("^0\\d{9,10}$", phoneInput)){
-                return phoneInput;
-            } else {
-                System.err.println("Vui lòng nhập theo định dạng: 10 hoặc 11 số , bắt đầu bằng số 0");
-            }
-            }
-        }while (true);
+                if (listStudents.stream().anyMatch(student -> student.getPhone().equals(phoneInput))) {
+                    System.err.println("Số điện thoại bị trùng, vui lòng nhập lại!");
+                } else {
+                    if (Pattern.matches("^0\\d{9,10}$", phoneInput)) {
+                        return phoneInput;
+                    } else {
+                        System.err.println("Vui lòng nhập theo định dạng: 10 hoặc 11 số , bắt đầu bằng số 0");
+                    }
+                }
+        } while (true);
     }
     @Override
     public void displayData() {

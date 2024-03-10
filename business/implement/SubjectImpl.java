@@ -50,6 +50,6 @@ public class SubjectImpl extends Subject implements IOData {
 
     @Override
     public void displayData() {
-        System.out.printf("Mã môn học: %s - Tên môn học: %s", getSubjectId(), getSubjectName());
+        System.out.printf("Mã môn học: %s - Tên môn học: %s\n", getSubjectId(), getSubjectName());
     }
 }
